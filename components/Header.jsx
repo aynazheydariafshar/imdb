@@ -11,10 +11,10 @@ export default function Header() {
         <MenuItems title="Home" url="/" Icon={HiHome} />
         <MenuItems title="About" url="/" Icon={RiInformationFill} />
       </div>
-      <div className='flex items-center justify-between text-2xl'>
-        <BsFillSunFill className='mx-3 hover:text-[#F5C518] hover:cursor-pointer'/>
-        <button className='bg-[#F5C518] mx-1 text-black font-bold rounded-md p-2'>IMDB</button>
-        <p className='font-bold mx-1'>Clone</p>
+      <div className='flex items-center space-x-4 justify-between text-2xl'>
+        <BsFillSunFill className=' hover:text-[#F5C518] hover:cursor-pointer'/>
+        <button className='bg-[#F5C518] text-black font-bold rounded-md p-2'>IMDB</button>
+        <p className='font-bold'>Clone</p>
       </div>
     </nav>
   )
