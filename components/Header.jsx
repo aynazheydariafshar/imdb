@@ -9,7 +9,7 @@ export default function Header() {
     <nav className='flex items-center justify-between p-4'>
       <div className='flex items-center justify-between'>
         <MenuItems title="Home" url="/" Icon={HiHome} />
-        <MenuItems title="About" url="/" Icon={RiInformationFill} />
+        <MenuItems title="About" url="/about" Icon={RiInformationFill} />
       </div>
       <div className='flex items-center space-x-4 justify-between text-2xl'>
         <DarkModeSwitcher />
