@@ -2,12 +2,12 @@ import React from 'react'
 import MenuItems from './MenuItems'
 import { HiHome } from 'react-icons/hi';
 import { RiInformationFill } from 'react-icons/ri';
-import DarkModeSwitcher from './DarkModeSwitcher';
+import DarkModeSwitcher from '../DarkModeSwitcher';
 
 export default function Header() {
   return (
     <nav className='flex items-center justify-between p-4 max-w-7xl mx-auto'>
-      <div className='flex items-center justify-between'>
+      <div className='flex items-center justify-between space-x-4'>
         <MenuItems title="Home" url="/" Icon={HiHome} />
         <MenuItems title="About" url="/about" Icon={RiInformationFill} />
       </div>
