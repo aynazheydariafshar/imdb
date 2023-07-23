@@ -6,7 +6,7 @@ import DarkModeSwitcher from './DarkModeSwitcher';
 
 export default function Header() {
   return (
-    <nav className='flex items-center justify-between p-4'>
+    <nav className='flex items-center justify-between p-4 max-w-7xl mx-auto'>
       <div className='flex items-center justify-between'>
         <MenuItems title="Home" url="/" Icon={HiHome} />
         <MenuItems title="About" url="/about" Icon={RiInformationFill} />
