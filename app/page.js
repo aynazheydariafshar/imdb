@@ -16,7 +16,7 @@ export default async function Home({ searchParams }) {
   );
   const data = await res.json();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex items-center justify-center p-24">
       <Result results={data.results} />
     </main>
   );
