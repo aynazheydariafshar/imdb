@@ -2,22 +2,22 @@ import '../public/assets/css/spinner.css'
 
 export default function Loading() {
   return (
-    <div class="loader">
-      <div class="loader-inner">
-        <div class="loader-line-wrap">
-          <div class="loader-line"></div>
+    <div className='loader dark:bg-[#121212]' class="">
+      <div className="loader-inner">
+        <div className="loader-line-wrap">
+          <div className="loader-line"></div>
         </div>
-        <div class="loader-line-wrap">
-          <div class="loader-line"></div>
+        <div className="loader-line-wrap">
+          <div className="loader-line"></div>
         </div>
-        <div class="loader-line-wrap">
-          <div class="loader-line"></div>
+        <div className="loader-line-wrap">
+          <div className="loader-line"></div>
         </div>
-        <div class="loader-line-wrap">
-          <div class="loader-line"></div>
+        <div className="loader-line-wrap">
+          <div className="loader-line"></div>
         </div>
-        <div class="loader-line-wrap">
-          <div class="loader-line"></div>
+        <div className="loader-line-wrap">
+          <div className="loader-line"></div>
         </div>
       </div>
     </div>
