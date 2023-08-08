@@ -4,9 +4,12 @@ import Link from "next/link";
 import imageLoader from "../public/assets/images/clapperboard.jpg";
 import { HiOutlineThumbUp } from "react-icons/hi";
 
-export default function Card({ item }) {
+export default function Card({ item, index }) {
   return (
-    <div className="cursor-pointer group sm:p-4 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200">
+    <div className="cursor-pointer relative group sm:p-4 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200">
+      <div className="bg-red-400 rounded-full group-hover:bg-orange-400 absolute top-[-15px] text-center">
+        <h2 className="px-1">{index + 1}</h2>
+      </div>
       <Link href={`/movie/${item.id}`}>
         <Image
           // src={`https://image.tmdb.org/t/p/original${
@@ -27,7 +30,7 @@ export default function Card({ item }) {
           </h2>
           <p className="flex items-center">
             {item.release_date || item.first_air_date}
-            <HiOutlineThumbUp className="mr-1 ml-5"/> {item.vote_count}
+            <HiOutlineThumbUp className="mr-1 ml-5" /> {item.vote_count}
           </p>
         </div>
       </Link>
