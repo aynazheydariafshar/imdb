@@ -2,20 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   background-color: #121212;
   color: white;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
 :root {
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     /* Your default theme */
     --background: #121212;
     --foreground: white;
   }
 
-  [data-theme='light'] {
+  [data-theme="light"] {
     --background: white;
     --foreground: #121212;
   }
