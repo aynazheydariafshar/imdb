@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import imageLoader from "../public/assets/images/clapperboard.jpg";
-import Error from "@/app/error";
+import { HiOutlineThumbUp } from "react-icons/hi";
 
 export default function Card({ item }) {
   return (
@@ -15,11 +15,21 @@ export default function Card({ item }) {
           src={imageLoader}
           width={500}
           height={300}
+          style={{ maxWidth: "100%", height: "auto" }}
           className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"
           placeholder="blur"
           blurDataURL="/assets/images/clapperboard.jpg"
         ></Image>
-        
+        <div className="p-2">
+          <p className="line-clamp-2">{item.overview}</p>
+          <h2 className="truncate text-lg font-bold">
+            {item.title || item.name}
+          </h2>
+          <p className="flex items-center">
+            {item.release_date || item.first_air_date}
+            <HiOutlineThumbUp className="mr-1 ml-5"/> {item.vote_count}
+          </p>
+        </div>
       </Link>
     </div>
   );
