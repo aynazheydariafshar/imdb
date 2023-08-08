@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import imageLoader from "../public/assets/images/clapperboard.jpg";
+import Error from "@/app/error";
 
 export default function Card({ item }) {
   return (
@@ -16,6 +17,7 @@ export default function Card({ item }) {
           height={300}
           className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"
           placeholder="blur"
+          blurDataURL="/assets/images/clapperboard.jpg"
         ></Image>
         
       </Link>
