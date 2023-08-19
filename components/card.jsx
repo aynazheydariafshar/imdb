@@ -16,6 +16,7 @@ export default function Card({ item, index }) {
           //   item.backdrop_path || item.poster_path
           // }`}
           src={imageLoader}
+          alt={item.title}
           width={500}
           height={300}
           style={{ maxWidth: "100%", height: "auto" }}
