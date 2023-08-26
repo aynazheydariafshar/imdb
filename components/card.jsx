@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import imageLoader from "../public/assets/images/clapperboard.jpg";
@@ -22,7 +21,7 @@ export default function Card({ item, index }) {
           style={{ maxWidth: "100%", height: "auto" }}
           className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"
           placeholder="blur"
-          blurDataURL="/assets/images/clapperboard.jpg"
+          blurDataURL="/assets/images/spinner.svg"
         ></Image>
         <div className="p-2">
           <p className="line-clamp-2">{item.overview}</p>

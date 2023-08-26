@@ -1,4 +1,3 @@
-// "use client";
 import Image from "next/image";
 import imageLoader from "@/public/assets/images/clapperboard.jpg";
 import { HiOutlineThumbUp } from "react-icons/hi";
@@ -12,32 +11,35 @@ async function getMovies(movieId) {
   return await res.json();
 }
 
-export default function Movie({ params }) {
+export default async function Movie({ params }) {
   const movieId = params.id;
-  const item = getMovies(movieId);
+  const item = await getMovies(movieId);
   return (
-    <div className="flex-col sm:flex justify-between items-center">
+    <div className="p-3 w-full md:pt-8 flex flex-col md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6">
       <Image
         // src={`https://image.tmdb.org/t/p/original${
         //   item.backdrop_path || item.poster_path
         // }`}
         src={imageLoader}
-        alt={item.title}
+        alt="image is not available"
         width={500}
         height={300}
-        style={{ maxWidth: "100%", height: "auto" }}
-        className="sm:rounded-lg group-hover:opacity-80 transition-opacity duration-200"
+        style={{ maxWidth: "100%", height: "100%" }}
+        className="rounded-lg"
         placeholder="blur"
-        blurDataURL="/assets/images/clapperboard.jpg"
+        blurDataURL="/assets/images/spinner.svg"
       ></Image>
       <div className="p-2">
-        <p>{item.overview}</p>
-        <h2 className="truncate text-lg font-bold">
-          {item.title || item.name}
-        </h2>
-        <p className="flex items-center">
+        <h2 className="text-lg mb-2 font-bold">{item.title || item.name}</h2>
+        <p className="text-lg mb-3">
+          <span className="font-semibold">Overview :</span> {item.overview}
+        </p>
+        <p className="flex items-center mb-1">
+          <span className="font-semibold mr-2">Date :</span>
           {item.release_date || item.first_air_date}
-          <HiOutlineThumbUp className="mr-1 ml-5" /> {item.vote_count}
+        </p>
+        <p className="flex items-center">
+          <HiOutlineThumbUp className="mr-1" /> {item.vote_count}
         </p>
       </div>
     </div>
