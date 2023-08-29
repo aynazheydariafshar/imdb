@@ -8,6 +8,7 @@ async function getMovies(movieId) {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`
   );
+  if (!res.ok) throw new Error("Error fetching data");
   return await res.json();
 }
 

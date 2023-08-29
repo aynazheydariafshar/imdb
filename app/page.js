@@ -14,6 +14,7 @@ export default async function Home({ searchParams }) {
     },
     { next: { revalidate: 10000 } }
   );
+  if (!res.ok) throw new Error("Error fetching data");
   const data = await res.json();
   return (
     <main className="flex items-center justify-center p-24">
